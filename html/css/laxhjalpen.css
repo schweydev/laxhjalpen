@@ -1,49 +1,150 @@
 @charset "UTF-8";
+/* 
+####################
+
+Global rules
+
+####################
+*/
+/* La in marginal i rotelementet så att inte innehåller komme precis inpå kanten vid mindre skärmar */
+html {
+    margin: 2%;
+}
 body {
+    font-family: "Helvetica Neue",
+    "Liberation Sans", Calibri, Arial, sans-serif;
     margin:auto; /* Centrera sidan */
     max-width: 860px;
     font-family: sans-serif;
     font-size: 100%; /* Startvärde */
 }
-section, header, footer {
-    outline: 1px solid red; /* Provisorisk */
+/* section, header, footer {
+    outline: 1px solid red; 
 }
+*/
 header {
     text-align: center;
 }
+
+/* lägger in block runt sektionerna */
 section {
     display: inline-block;
     width: 20%;
     margin-right: 4%;
 }
+/*
+##########################
+
+Regler för startsidan
+
+##########################
+*/
 .startpage h1 {
     font-size: 500%; /* Massiv rubrik på startsidan */
 }
+
+/* Lägger in flex för sektioner */
 .startpage {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+/* Sätter bredden till 100% på header och footer */
 .startpage header,
 .startpage footer {
     flex: 0 0 100%;
 }
+
+/* lägger in sektionerna efter varandra, ändrar % till 21 så de alla hamnar på rad.*/
 .startpage section {
-    flex: 0 0 22%;
+    flex: 0 0 21%;
 }
+.startpage .logo {
+    width: 235px;
+    height: 198px;
+}
+/*
+##########################
+
+Regler för container
+
+##########################
+*/
+.hwrap {
+    display: flex; /* Gör divven till en flex container */
+    flex-wrap: wrap; /* radbryt om det behövs */
+    align-items: center; /* Lägg elementen centrerat vertikalt */
+    justify-content: center; /* och intill varandra centrerat */
+}
+.hwrap > a {
+    margin-right: 30px;
+}
+/*
+##########################
+
+Regler för undresidor
+
+##########################
+*/
 .tagline {
     font-size: 120%;
+    text-align: center;
     padding: 0.5em; /* Avstånd till kantlinje */
     border-top: 3px double #00AF64;
     border-bottom: 3px double #00AF64;
     margin: 1em 0; /* Avstånd tnedåt med inte uppåt */
 }
+
+    /* Lagt in typsnittet Merienda One i header och sektionerna som tillhandahålls av Google. */
+h1 {
+    font-family: "Merienda One", cursive;
+}
+    /* Lagt in att första bokstaven i rubrik ska vara annan färg */
+h1::first-letter {
+    color: #00af64;
+}
+/*
+##########################
+
+Regler för meny
+
+##########################
+*/
 .menu > h2 {
+    font-family: "Merienda One", cursive;
+    box-shadow: inset 0 0 20px #007241; /* La in rundningen i rubrikerna med en box shadow */
+    border-radius: 50%;
     margin: 0 0 1em;
     padding: 2em 0;
     background-color: #F5F5F5; /* Mycket ljus grå */
     text-align: center;
 }
+
+/* Lägger till annan färg på länkarna och tar bort underline */
+.menu a:link,
+.menu a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu a:focus,
+.menu a:hover {
+    text-decoration: underline;
+    color: #a62f00;
+}
+
+.menu a:active {
+    text-decoration: underline;
+    color: #ff4900;
+}
+/*
+##########################
+
+Regler för footer
+
+##########################
+*/
 footer {
     margin-top: 3em;
     text-align: center;
