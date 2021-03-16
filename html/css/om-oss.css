@@ -1,0 +1,114 @@
+/*
+###############
+
+Regler för Om oss-sidan
+har inte utgått från din css.fil.
+
+###############
+*/
+/* Lägger in flex för sektioner */
+
+.subpage .Logo {
+    width: 146px;
+    height: 123px;
+}
+.subpage h1 {
+    font-size: 2.6rem;
+}
+h1 > span {
+    color: #a62f00;
+}
+.subpage .hwrap {
+    justify-content: space-between;
+}
+
+/* ändrade från 20% till 25% för att få en mer likvärdig bild från referensen, plus att loggan inte ville flyttas ner efter att h1 lagts in med flex-wrap: wrap så ändrade min-width till 300px*/
+.subpage .hwrap > a,
+.subpage .hwrap > h1 {
+    flex: 0 1 25% ;
+    min-width: 300px;
+    margin-right: 10px;
+    /* outline: 1px solid; */
+}
+.subpage .hwrap > h1,
+div[role=main] {
+    flex: 1 1 300px;
+}
+nav {
+    flex: 0 1 25% ;
+    min-width: 146px;
+    margin-right: 10px;
+    /* outline: 1px solid; */
+}
+/* 
+###############
+
+regler för meny om oss
+
+###############
+*/
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1em 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu > h2 {
+    margin: 0 0 1rem;
+    width: 100%;
+}
+
+/* 
+###############
+
+regler för återkommande komponenter
+
+###############
+*/
+
+/* Lagt in en grå ram runt varje persons namn */
+.dborder {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+/* 
+################ 
+
+regler undre sidor
+
+################
+*/
+
+article {
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    border-bottom: 3px double #00af64;
+}
+article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+article p {
+    margin-left: 140px;
+    hyphens: auto;
+}
+figure {
+    float: left;
+    margin: 0; 
+}
+figure img {
+    width: 128px;
+    height: 128px;
+}
+figcaption {
+    font:italic bolder 110% sans-serif;
+    font-family: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    color: #666;
+}
+

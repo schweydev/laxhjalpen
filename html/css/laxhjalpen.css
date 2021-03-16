@@ -6,7 +6,7 @@ Global rules
 
 ####################
 */
-/* La in marginal i rotelementet så att inte innehåller komme precis inpå kanten vid mindre skärmar */
+/* La in marginal i rotelementet så att inte innehåller komme precis inpå kanten vid mindre skärmar. Har även inte utgått från den bifogade css-fil.*/
 html {
     margin: 2%;
 }
@@ -22,8 +22,10 @@ body {
     outline: 1px solid red; 
 }
 */
+/* Har lagt in header på 100% */
 header {
     text-align: center;
+    width: 100%;
 }
 
 /* lägger in block runt sektionerna */
@@ -31,6 +33,15 @@ section {
     display: inline-block;
     width: 20%;
     margin-right: 4%;
+}
+
+/* Lagt in nav på 20% här för att få det elementet 20% av hela sidan*/
+nav {
+    width: 20%;
+}
+
+.div {
+    width: 75%;
 }
 /*
 ##########################
@@ -145,8 +156,14 @@ Regler för footer
 
 ##########################
 */
+
+/* redan inlagt element och sökte då snabbt upp footer genom cmd+f och la in -100% enligt anvisning */
 footer {
     margin-top: 3em;
     text-align: center;
     color: #999;
+    width: -100%;
+}
+.flex {
+    display: flex;
 }
