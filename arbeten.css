@@ -1,0 +1,74 @@
+/*
+###############
+
+Regler för arbeten
+
+###############
+*/
+
+/* 
+###############
+
+Regler för sidans tabeller
+
+###############
+*/
+
+.table {
+    border-spacing: 0;
+    border: 1px solid #d3d3d3;
+    width: 96%;
+    margin: 1em auto 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Pekar regler specifikt utifall man vill lägga till fler tabeller med olika styling i framtiden*/
+.table > thead {
+    font-size: 150%;
+    text-shadow: #fff 1px 1px 1px;
+}
+.table > thead th, .table > tbody td {
+    padding: 1.1rem 1.8rem 1.1rem;
+}
+.table > thead th {
+    padding-top: 1.4rem;
+    background: #ddd;
+    text-align: left;
+}
+.table > thead th:not(:last-child) {
+    border-right: 1px solid #f2f2f2;
+}
+.table > tbody td {
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+.table > tbody > tr:target {
+    background-color: #61d7a4;
+}
+/* la in transform: scale som ändrar storlek vid hover */
+.table > tbody > tr:hover {
+    transform: scale(1.05);
+    background-color: #ff9b73;
+}
+
+/* ändrade till en halv sekund av eget tycke */
+.table > tbody > tr {
+    transition: all 0.5s;
+}
+.table > tbody td:nth-child(1) {
+    width: 50px;
+}
+.table > tbody td:nth-child(2) {
+    width: 50px;
+}
+
+/* Lägger in zebra-koden för övning.
+
+.table > tbody > tr:nth-child(odd) { 
+    background-color: #bba8a1;
+}
+.table > tbody > tr:nth-child(even) {
+    background-color: #a7958e;
+}*/
+
